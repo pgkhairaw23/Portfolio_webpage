@@ -21,112 +21,298 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
-
-
-
 <style>
-
-/*======================================
-//--//-->   ABOUT
-======================================*/
-
-.about-mf .box-shadow-full {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+/* ===== GENERAL ===== */
+body {
+  background: #000;
+  color: #fff;
 }
 
-.about-mf .about-img {
-  margin-bottom: 2rem;
+/* ===== IMAGE ===== */
+.image {
+  width: 450px;
+  height: 70vh;
+  border-radius: 100%;
+  overflow: hidden;
+  box-shadow: 0 0 50px #d5b26a;
 }
 
-.about-mf .about-img img {
-  margin-left: 10px;
+.image img {
+  width: 100%;
+  object-fit: cover;
 }
 
-
-.skill-mf .progress {
-  /* background-color: #cde1f8; */
-  margin: .5rem 0 1.2rem 0;
-  border-radius: 0;
-  height: .7rem;
-}
-
-.skill-mf .progress .progress-bar {
-  height: .7rem;
-  background-color: #ffbd39;
-}
-
-
-/* Animation styles */
+/* ===== TYPING ANIMATION ===== */
 #typing-animation {
-  position: relative;
   font-size: 30px;
   font-weight: bold;
-  color: rgb(255, 255, 255);
-  overflow: hidden;
   white-space: nowrap;
+  overflow: hidden;
   animation: typing 3s steps(20, end) infinite;
 }
 
-#typing-animation:before {
-  content: "";
-  /* position: absolute; */
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: #ccc;
-  animation: typing-cursor 0.5s ease-in-out infinite;
-}
-
 @keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+  from { width: 0; }
+  to { width: 100%; }
 }
 
-@keyframes typing-cursor {
-  from {
-    width: 5px;
-  }
-  to {
-    width: 0;
-  }
+/* ===== COMMON TITLE ===== */
+.section-title {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: center;
 }
 
+.section-title span {
+  color: #c9a74d;
+}
 
-/* project image zoom effect */
+/* ===== ABOUT SECTION ===== */
+.about-section {
+  padding: 100px 20px;
+}
 
-.zoom-effect {
+.about-content {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.about-text {
+  color: #ccc;
+  margin-bottom: 40px;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+/* INFO GRID */
+.about-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px 40px;
+  margin-bottom: 50px;
+  text-align: left;
+}
+
+.about-info div {
+  background: #111;
+  padding: 12px 18px;
+  border-radius: 8px;
+  border: 1px solid #222;
+  color: #ddd;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.about-info div:hover {
+  border-color: #c9a74d;
+  transform: translateY(-3px);
+}
+
+.about-info strong {
+  color: #c9a74d;
+}
+
+.about-footer {
+  text-align: center;
+}
+
+.project-count {
+  font-size: 26px;
+  font-weight: bold;
+  color: #c9a74d;
+}
+
+/* ===== SKILLS ===== */
+.skills-section {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.skill-card {
+  padding: 25px;
+  margin-bottom: 25px;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.skill-tags span {
+  background: #ffbd39;
+  color: #000;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.skill-tags span:hover {
+  transform: scale(1.08);
+}
+
+/* ===== PROJECTS ===== */
+.project-card {
+  background: #111;
+  border-radius: 12px;
   overflow: hidden;
-  transition: transform 0.3s ease-out;
+  transition: 0.3s;
 }
 
-.zoom-effect:hover {
-  transform: scale(1.1);
+.project-card:hover {
+  transform: translateY(-8px);
 }
 
-.image{
-    width: 450px;
-    height: 70vh;
-    border-radius: 100%;
-    overflow: hidden;
-    box-shadow: 0 0 50px #ffbd39;
-    z-index: -1;
+.project-img {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
 }
 
- .image img{
+.project-content {
+  padding: 15px;
+}
+
+.project-content h5 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.project-content p {
+  color: #aaa;
+  font-size: 14px;
+}
+
+/* ===== JOURNEY ===== */
+.journey-section {
+  padding: 80px 0;
+}
+
+.section-subtitle {
+  color: #c9a74d;
+  letter-spacing: 2px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.column-title {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 20px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: #c9a74d;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+  padding-left: 20px;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  background: #c9a74d;
+  border-radius: 50%;
+}
+
+.date {
+  color: #c9a74d;
+  font-size: 14px;
+}
+
+.company {
+  color: #aaa;
+  font-size: 14px;
+}
+
+/* ===== BUTTON ===== */
+.btn-gold {
+  background: #c9a74d;
+  color: #000;
+  padding: 12px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: #000;
+  color: #aaa;
+  padding: 25px 0;
+  font-size: 14px;
+}
+
+.footer span {
+  color: #c9a74d;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .image {
+    width: 250px;
+    height: 250px;
+    margin: auto;
+  }
+
+  .section-title {
+    font-size: 32px;
+  }
+
+  .about-info {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .timeline {
+    padding-left: 25px;
+  }
+
+  .timeline::before {
+    left: 5px;
+  }
+
+  .timeline-item {
+    padding-left: 25px;
+  }
+
+  .timeline-item::before {
+    left: -2px;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 26px;
+  }
+
+  .btn-gold {
     width: 100%;
-}
-
-</style>
-
-
-  </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    text-align: center;
+  }
+}</style>
+</head>
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 	  
 	  
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
@@ -140,14 +326,17 @@
 	        <ul class="navbar-nav nav ml-auto">
 	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
 	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+						<li class="nav-item"><a href="#skills-section" class="nav-link"><span>Skills</span></a></li>
 	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+						<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
 	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
 	        </ul>
 	      </div>
 	    </div>
 	  </nav>
-	  <section id="home-section" class="hero">
+
+<!--HOME SECTION-->
+<section id="home-section" class="hero">
 		  <div class="home-slider  owl-carousel">
 	       <div class="slider-item ">
 	      	<div class="overlay"></div>
@@ -202,7 +391,7 @@
 			            <h2>Active Learner</h2>
 						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
 						<!-- <br> -->
-			            <p><a href="pgkhairaw23@gmail.com" class="btn btn-primary py-3 px-4">Hire me</a> 
+			            <p><a href="mailto:pgkhairaw23@gmail.com" class="btn btn-primary py-3 px-4">Hire me</a> 
 							<a href="Resume-new.pdf" class="btn btn-white btn-outline-white py-3 px-4">Download CV</a></p>
 		            </div>
 		          </div>
@@ -212,257 +401,253 @@
 		</div>
     </section>
 
+<!--ABOUT SECTION-->
+	<section class="about-section" id="about-section">
+  <div class="container">
 
+    <div class="about-content text-center">
 
-    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
-    	<div class="container">
-			<div class="row">
-				<div class="row d-flex align-items-stretch">
-				<!-- <div class="row d-flex"> -->
-					<div class="col-md-6 col-lg-5 d-flex">
-						<div class="img-about img d-flex align-items-stretch">
-							<div class="overlay">
-								<div class="row">
-									<div class="col-sm-6 col-md-5">
-									  <div class="about-img">
-										<img src="images/photo2.jpeg" class="img-fluid rounded b-shadow-a" alt="">
-									  </div>
-									</div>
-									<!-- Details next to profile image -->
-									<div class="col-sm-6 col-md-7">
-									  <div class="about-info">
-										<p><span class="title-s">Name: </span> <span>Priyanka Khairaw</span></p>
-										<p><span class="title-s">Job Role: </span> <span>Developer</span></p>
-										<p><span class="title-s">Experience: </span> <span>Fresher</span></p>
-										<p><span class="title-s">Address: </span> <span>Pune, India</span></p>
-									  </div>
-									</div>
-								  </div>
+     
+      <h2 class="section-title">About Me</h2>
 
-								<div class="skill-mf"><br>
-									<p class="title-s">Skills</p>
-									<span>Database-SQL, Postgresql, MangoDB</span> <span class="pull-right">95%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Programming-C, Java, Python</span> <span class="pull-right">85%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>FrontEnd- HTML, CSS, JavaScript, React</span> <span class="pull-right">90%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Backend-Express, Node.js</span> <span class="pull-right">95%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>Data Structure & Algorithms</span> <span class="pull-right">80%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
+      <p class="about-text">
+        I am an active learner with strong problem-solving abilities and a passion
+        for building efficient and scalable software solutions. I specialize in
+        Java, Python, and Data Structures & Algorithms, and enjoy working on real-world projects.
+      </p>
 
-									<span>Framework-Bootstrap, Node.js</span> <span class="pull-right">80%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-						<div class="row justify-content-start pb-3">
-							<div class="col-md-12 heading-section ftco-animate">
-								
-								<h1 class="big">About</h1>
-								<h2 class="mb-4">About Me</h2>
-								
-								<p> As a Active-Learner highly organized and proactive student with excellent communication skills
-									seeking internships, Jobs . I possess problem- solving skills, programming knowledge in Python,
-									Java, C, and with Data structures & Algorithms. Possess exceptional communication and
-									interpersonal skills with a proven ability to work independently and as part of a team.</p>
-								<ul class="about-info mt-4 px-md-0 px-2">
-									<li class="d-flex"><span>Profile:</span> <span>Java Developer &amp;  Web Developing</span></li>
-									<li class="d-flex"><span>Domain:</span> <span> Software</span></li>
-									<li class="d-flex"><span>Education:</span> <span>Bachelor's of Computer Science</span></li>
-									<li class="d-flex"><span>Language:</span> <span>English, Hindi</span></li>
-									<li class="d-flex"><span>BI Tools:</span> <span>Full Stack Developr, &amp; </span></li>
-									<li class="d-flex"><span>Other Skills:</span> <span>Java, C/C++, python, Data Science </span></li>
-									<li class="d-flex"><span>Interest:</span> <span>Traveling, Travel Photography, Listening Music</span></li>
-									
-								</ul>
-							</div>
-						</div>
-
-
-						<div class="counter-wrap ftco-animate d-flex mt-md-3">
-							<div class="text">
-								<p class="mb-4">
-									<span class="number" data-number="20">0</span> <span>+</span>
-									<span>&nbsp; Projects completed</span>
-								</p>
-								<p><a href="https://www.linkedin.com/in/priyanka-khairaw-050508201/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-    </section>
-
-
-
-	
-    <section class="ftco-section ftco-no-pb" id="resume-section">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5">
-          <div class="col-md-10 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Resume</h1>
-            <h2 class="mb-4">Resume</h2>
-            <p> I am a skilled software developer, web developer, and Java developer, with expertise in building scalable applications, developing responsive websites, and delivering robust Java-based solutions.</p>
-			<div class="row justify-content-center mt-5">
-    			<div class="col-md-6 text-center ftco-animate">
-    				<p><a href="Resume-new.pdf" class="btn btn-primary py-4 px-5">Download CV</a></p>
-    			</div>
-    		</div>
-          </div>
-        </div>
-
-		<div class="row">
-			<h1 class="big-4">Experience</h1>
-			<div class="underline"></div>
-		</div>
-		<br>
-		
-		<div class="row">
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">2024 (1 month)</span>
-						<h2>Web Development</h2>
-						<span class="position">Codsoft</span>
-						<p class="mt-4">Completed a web development internship at CodSoft, where I built responsive web pages and contributed to real-world client projects using HTML, CSS, and JavaScript.
-						</p>
-					</div>
-
-				</div>
-
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date"></span>
-						<h2>Volunteering / Leadership Roles</h2><br>
-						<span class="position">Dr.Arvind B. Telang Collage</span>
-						
-							<br><br><ul>
-								<li>Tech Club Coordinator – Dr.Arvind B. Telang College  
-									- Organized coding workshops for 50+ students  
-									- Mentored juniors on basic web development projects  
-									</li>
-								
-							</ul>
-						</p>
-					</div>
-
-				</div>
-			</div>
-
-		<br>
-		<br>
-
-		<div class="row">
-			<h1 class="big-4">Education</h1>
-			<div class="underline"></div>
-		</div>
-		<br>
-		
-			<div class="row">
-
-			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2025-Active</span>
-    					<h2>Master's of Computer Applications</h2>
-    					<span class="position">D. Y. Patil Institute of Master of Computer Applications and Management, Akurdi.</span>
-    					<p class="mt-4">Grade: Active</p>
-    				</div>
-			</div>
-    	<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2022-2025</span>
-    					<h2>Bachelor of Computer Science</h2>
-    					<span class="position">SavitriBai Phule University Pune</span>
-    					<br><br><p class="mt-4">Grade: Excellent.</p>
-    				</div>
-    	</div>
+      <div class="about-info">
+        <div><strong>Profile:</strong> Java Developer & Web Developer</div>
+        <div><strong>Domain:</strong> Software Development</div>
+        <div><strong>Education:</strong> Master's of Computer Application</div>
+        <div><strong>Languages:</strong> English, Hindi</div>
+        <div><strong>Skills:</strong> Java, Python, C/C++, Data Structures</div>
+        <div><strong>Interests:</strong> Traveling, Photography, Music</div>
       </div>
 
-    		
-    </section>
+      <div class="about-footer">
+        <p><span class="project-count">20+</span> Projects Completed</p>
+        <a href="https://www.linkedin.com/" class="btn btn-primary">LinkedIn</a>
+      </div>
 
-	
+    </div>
 
-   
+  </div>
+</section>
 
-    <section class="ftco-section" id="project-section">
-      <div class="container">
-        <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Projects</h1>
-            <h2 class="mb-4">Projects</h2>
-            <p>Below are the sample projects.</p>
+
+
+<!-- ✅ SKILLS SECTION -->
+<section id="skills-section" class="skills-section">
+  <div class="container">
+
+    <div class="section-title">
+       <h2 class="section-title">Skills</h2>
+    </div>
+
+    <div class="row">
+
+      <!-- Languages -->
+      <div class="col-md-4">
+        <div class="skill-card">
+          <h4>Languages</h4>
+          <div class="skill-tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>Java</span>
+            <span>Python</span>
+            <span>C</span>
           </div>
         </div>
-        <div class="row d-flex">
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="" class="block-20 zoom-effect" style="background-image: url('images/resto.jpeg');">
-              </a>
-              <div class="text mt-3 float-right d-block">
+      </div>
 
-                <h3 class="heading"><a href="https://github.com/pgkhairaw23/Restaurant-project">Restaurant Management System</a></h3>
-                <p>Using HTML, CSS & Javascript<br>
-					For Order Management.
-				</p>
-              </div>
-            </div>
+      <!-- Frameworks -->
+      <div class="col-md-4">
+        <div class="skill-card">
+          <h4>Frameworks & Tools</h4>
+          <div class="skill-tags">
+            <span>Spring Boot</span>
+            <span>Django</span>
+            <span>React</span>
+            <span>Node.js</span>
+            <span>Express</span>
+            <span>GitHub</span>
           </div>
-		</div>
-        </section>
+        </div>
+      </div>
 
-	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
-	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
-			<!-- <div class="container"> -->
-				<div class="row justify-content-center">
-					<div class="col-md-7 ftco-animate text-center">
-						<h2>More projects on<span> Github  </span> </h2>
-						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
-						<br>
-						<p><a href="https://github.com/pgkhairaw23" class="btn btn-primary py-3 px-5">GitHub</a></p>
-						</div>
-					</div>
-				</div>
-			<!-- </div> -->
-		</div>
-	</section>
+      <!-- Databases -->
+      <div class="col-md-4">
+        <div class="skill-card">
+          <h4>Databases</h4>
+          <div class="skill-tags">
+            <span>MySQL</span>
+            <span>PostgreSQL</span>
+            <span>MongoDB</span>
+            <span>SQLite</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Other Skills -->
+      <div class="col-md-12">
+        <div class="skill-card">
+          <h4>Other Skills</h4>
+          <div class="skill-tags">
+            <span>Data Structures</span>
+            <span>Algorithms</span>
+            <span>Bootstrap</span>
+            <span>Problem Solving</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+	
+<!--PROJECT SECTION-->
+    <section class="ftco-section" id="project-section">
+  <div class="container">
+
+    <!-- Heading -->
+    <div class="row justify-content-center mb-5">
+      <div class="col-md-7 text-center">
+        <h1 class="big big-2">Projects</h1>
+        <p>Below are some sample projects.</p>
+      </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="row">
+
+      <!-- Project 1 -->
+      <div class="col-md-4 col-sm-6 mb-4">
+        <div class="project-card">
+
+          <a href="https://github.com/pgkhairaw23/Restaurant-project" target="_blank">
+            <div class="project-img" style="background-image: url('images/resto.jpeg');"></div>
+          </a>
+
+          <div class="project-content text-center">
+            <h5>Restaurant Management System</h5>
+            <p>Tools - HTML, CSS & JavaScript.</p>
+          </div>
+
+        </div>
+      </div>
+
+			<!-- Project 2 -->
+      <div class="col-md-4 col-sm-6 mb-4">
+        <div class="project-card">
+
+          <a href="https://github.com/pgkhairaw23/Restaurant-project" target="_blank">
+            <div class="project-img" style="background-image: url('images/VOTE.jpeg');"></div>
+          </a>
+
+          <div class="project-content text-center">
+            <h5>Class Representative Voing System</h5>
+            <p>Tools - HTML, CSS, JavaScript & Python(Flask)<br> </p>
+          </div>
+
+        </div>
+      </div>
+
+			<!-- Project 3 -->
+      <div class="col-md-4 col-sm-6 mb-4">
+        <div class="project-card">
+
+          <a href="https://github.com/pgkhairaw23/Restaurant-project" target="_blank">
+            <div class="project-img" style="background-image: url('images/RTLC.jpg');"></div>
+          </a>
+
+          <div class="project-content text-center">
+            <h5>Cowrite - Real Time Live Collabration</h5>
+            <p>Tools - HTML, CSS, JavaScript & Node.js, Express, Socket.io<br> </p>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ===== JOURNEY SECTION ===== -->
+<section class="journey-section" id="resume-section">
+  <div class="container journey-container">
+
+    <h5 class="section-subtitle text-center">EXPERIENCE & EDUCATION</h5>
+    <h1 class="section-title text-center">My <span>Journey</span></h1>
+
+    <div class="row">
+
+      <!-- Experience -->
+      <div class="col-md-6">
+        <h3 class="column-title">Experience</h3>
+
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <span class="date">LEADERSHIP</span>
+            <h4>Tech Club Coordinator <p class="company">Dr. Arvind B. Telang Senior College of Arts,Science and Commerce</p> </h4>
+            <ul>
+              <li class="company">Organized coding workshops</li>
+              <li class="company">Mentored juniors</li>
+            </ul>
+          </div>
+
+					<div class="timeline-item">
+            <span class="date">Web Development</span>
+            <h4>CodSoft <p class="company">Built responsive web pages and contributed to real-world client projects using HTML, CSS, and JavaScript.</p> </h4>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+			<!-- EDUCATION -->
+      <div class="col-md-6">
+        <h3 class="column-title">Education</h3>
+
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <span class="date">2025 - PRESENT</span>
+            <h4>Master of Computer Applications <p class="company">D. Y. Patil Institute of Master of Computer Applications and Management, Akurdi, Pune.</p> </h4>
+          </div>
+					<br>
+					<div class="timeline-item">
+            <span class="date">2022 - 2025</span>
+            <h4>Bachelor of Computer Science <p class="company">Dr. Arvind B. Telang Senior College of Arts,Science and Commerce, Nigdi, Pune.<br>CGPA - 9.09</p> </h4>
+						
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-5">
+      <a href="Resume_new.pdf" class="btn btn-gold">DOWNLOAD FULL CV</a>
+    </div>
+
+  </div>
+</section>
 
 
 
-    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+<!--CONATCT SECTION-->
+<section class="ftco-section contact-section ftco-no-pb" id="contact-section">
       <div class="container">
       	<div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Contact</h1>
             <h2 class="mb-4">Contact Me</h2>
-            <p>Below are the details to reach out to me!</p>
           </div>
         </div>
 
@@ -500,7 +685,7 @@
           			<span class="icon-globe"></span>
           		</div>
           		<h3 class="mb-4">Download Resume</h3>
-	            <p><a href="Resume-new.pdf">Resume link</a></p>
+	            <p><a href="Resume_new.pdf">Resume link</a></p>
 	          </div>
           </div>
 
@@ -526,23 +711,19 @@
 
 
  
-	
-    <footer class="ftco-footer ftco-section">
-		<div class="container">
-		  <div class="row">
-			<div class="col-md-12 text-center">
-  
-			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-			</div>
-		  </div>
-		</div>
-	  </footer>
+<!--FOOTER SECTION-->
+<footer class="footer">
+  <div class="container text-center">
+    <p>
+      © <span id="year"></span> Priyanka Khairaw. All rights reserved.
+    </p>
+  </div>
+</footer>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 
 
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
 
   <script src="js/jquery.min.js"></script>
